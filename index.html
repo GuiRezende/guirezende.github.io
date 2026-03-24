@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio - Guilherme</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Titillium Web', 'sans-serif']
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(15, 23, 42, 0.08)'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body
+  class="font-sans bg-gradient-to-br from-slate-50 via-white to-blue-50 text-slate-900 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 dark:text-slate-100 transition-colors duration-300">
+  <header
+    class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur z-50 border-b border-slate-200 dark:bg-slate-950/80 dark:border-slate-800">
+    <nav class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="#home" class="text-xl font-bold whitespace-nowrap text-slate-900 dark:text-white">
+        Guilherme<span class="text-blue-600"> &#60/&#62</span>
+      </a>
+
+      <div class="flex justify-between items-center gap-6">
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-700 dark:text-slate-300">
+          <a href="#home" class="hover:text-blue-600 transition">Home</a>
+          <a href="#sobre" class="hover:text-blue-600 transition">Sobre</a>
+          <a href="#projetos" class="hover:text-blue-600 transition">Projetos</a>
+          <a href="#habilidades" class="hover:text-blue-600 transition">Habilidades</a>
+          <a href="#contato" class="hover:text-blue-600 transition">Contato</a>
+        </div>
+
+        <button id="theme-toggle" type="button"
+          class="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-700 shadow-soft transition hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:hover:bg-slate-800"
+          aria-label="Alternar tema">
+          <span id="theme-toggle-icon">🌙</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="pt-16 md:pt-24">
+    <section id="home"
+      class="scroll-mt-24 max-w-6xl mx-auto px-4 min-h-[85vh] flex flex-col-reverse md:flex-row items-center justify-center gap-10 md:gap-20">
+      <div class="text-center md:text-left max-w-xl">
+        <span
+          class="inline-flex items-center rounded-full bg-blue-100 text-blue-700 px-4 py-1.5 text-sm font-semibold mb-4 dark:bg-blue-500/10 dark:text-blue-300">
+          Desenvolvedor Full Stack
+        </span>
+
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-slate-900 dark:text-white">
+          Guilherme Rezende
+        </h1>
+
+        <h2 class="text-xl sm:text-5xl md:text-2xl text-slate-600 mt-3 dark:text-slate-300">
+          Criando aplicações web modernas com Java e React
+        </h2>
+
+        <p class="text-slate-600 mt-5 max-w-md mx-auto md:mx-0 text-lg leading-7 dark:text-slate-300">
+          Desenvolvo interfaces intuitivas e sistemas robustos, unindo performance, escalabilidade e boas práticas para
+          transformar ideias em soluções digitais.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a href="/assets/Currículo - Guilherme Rezende.pdf" download target="_blank"
+            class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition text-center shadow-soft">
+            Baixar currículo
+          </a>
+
+          <a href="#contato"
+            class="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-900 border border-slate-300 px-6 py-3 rounded-xl font-semibold transition text-center shadow-soft dark:bg-slate-900 dark:hover:bg-slate-800 dark:text-white dark:border-slate-700">
+            Entrar em contato
+          </a>
+        </div>
+      </div>
+
+      <div class="flex justify-center">
+        <div class="relative">
+          <div class="absolute inset-0 bg-blue-200 blur-3xl opacity-60 rounded-full dark:bg-blue-500/30"></div>
+          <img src="/assets/foto_guilherme.png" alt="Foto de Guilherme"
+            class="relative w-44 h-44 md:w-80 md:h-80 object-cover rounded-full shadow-soft border-8 border-white bg-slate-200 dark:border-slate-900 dark:bg-slate-800">
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre"
+      class="scroll-mt-24 px-4 py-20 bg-white/70 border-y border-slate-200/80 dark:bg-slate-900/60 dark:border-slate-800">
+      <div class="max-w-6xl mx-auto">
+        <div class="max-w-4xl">
+          <span
+            class="inline-flex items-center rounded-full bg-blue-100 text-blue-700 px-4 py-1.5 text-sm font-semibold mb-4 dark:bg-blue-500/10 dark:text-blue-300">Sobre
+            mim</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">
+            Desenvolvimento backend com foco em Java, integrações e sistemas corporativos
+          </h2>
+
+          <div class="mt-6 space-y-4 text-slate-600 leading-7 text-lg dark:text-slate-300">
+            <p>
+              Sou desenvolvedor backend com experiência na construção e evolução de aplicações Java para ambientes
+              corporativos, atuando principalmente com integrações entre sistemas, processamento em lote e modernização
+              de soluções críticas.
+            </p>
+            <p>
+              Ao longo da minha trajetória, participei de projetos em empresas como <strong
+                class="text-slate-900 dark:text-white">B3</strong>, <strong
+                class="text-slate-900 dark:text-white">Núclea</strong> e <strong
+                class="text-slate-900 dark:text-white">Sompo Seguros</strong>, contribuindo com melhoria de arquitetura,
+              confiabilidade, performance e qualidade técnica.
+            </p>
+            <p>
+              Abaixo, apresento algumas das experiências que marcaram minha atuação profissional.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 pt-10">
+          <article
+            class="rounded-2xl bg-white p-6 border border-slate-200 shadow-soft hover:-translate-y-1 hover:shadow-lg transition dark:bg-slate-900 dark:border-slate-800">
+            <h4 class="text-xl font-semibold text-slate-900 dark:text-white">B3</h4>
+            <p class="text-sm text-blue-700 mt-1 font-semibold dark:text-blue-300">Backend Developer</p>
+            <p class="text-slate-600 mt-4 leading-6 dark:text-slate-300">
+              Atuação em modernização de sistemas críticos, com foco em performance, confiabilidade e evolução de
+              arquitetura.
+            </p>
+          </article>
+
+          <article
+            class="rounded-2xl bg-white p-6 border border-slate-200 shadow-soft hover:-translate-y-1 hover:shadow-lg transition dark:bg-slate-900 dark:border-slate-800">
+            <h4 class="text-xl font-semibold text-slate-900 dark:text-white">Núclea</h4>
+            <p class="text-sm text-blue-700 mt-1 font-semibold dark:text-blue-300">Backend Developer</p>
+            <p class="text-slate-600 mt-4 leading-6 dark:text-slate-300">
+              Participação em integrações entre sistemas e melhorias técnicas em aplicações corporativas.
+            </p>
+          </article>
+
+          <article
+            class="rounded-2xl bg-white p-6 border border-slate-200 shadow-soft hover:-translate-y-1 hover:shadow-lg transition dark:bg-slate-900 dark:border-slate-800">
+            <h4 class="text-xl font-semibold text-slate-900 dark:text-white">Sompo Seguros</h4>
+            <p class="text-sm text-blue-700 mt-1 font-semibold dark:text-blue-300">Backend Developer</p>
+            <p class="text-slate-600 mt-4 leading-6 dark:text-slate-300">
+              Desenvolvimento de soluções backend com foco em qualidade, testes e entregas consistentes.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos" class="scroll-mt-24 px-4 py-20">
+      <div class="max-w-6xl mx-auto">
+        <span
+          class="inline-flex items-center rounded-full bg-blue-100 text-blue-700 px-4 py-1.5 text-sm font-semibold mb-4 dark:bg-blue-500/10 dark:text-blue-300">Projetos</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Projetos em destaque</h2>
+        <p class="text-slate-600 mt-4 max-w-2xl text-lg dark:text-slate-300">
+          Seleção de projetos em que atuei, com destaque para contexto de negócio, evolução técnica e impacto
+          operacional.
+        </p>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <article
+            class="rounded-2xl bg-white p-6 border border-slate-200 shadow-soft hover:-translate-y-1 hover:shadow-lg transition dark:bg-slate-900 dark:border-slate-800">
+            <h3 class="text-xl font-semibold text-slate-900 dark:text-white">PREVCAP</h3>
+            <p class="text-slate-600 mt-3 leading-6 dark:text-slate-300">
+              Projeto desenvolvido no contexto da nova regulamentação do mercado financeiro trazida pela Lei 14.652/23,
+              que passou a permitir o uso de produtos como previdência aberta e títulos de capitalização como garantia
+              em operações de crédito. Minha atuação envolveu a construção e evolução de funcionalidades e regras de
+              negócio para suportar esse novo cenário regulatório, com foco em aderência, confiabilidade e suporte à
+              operação.
+            </p>
+          </article>
+
+          <article
+            class="rounded-2xl bg-white p-6 border border-slate-200 shadow-soft hover:-translate-y-1 hover:shadow-lg transition dark:bg-slate-900 dark:border-slate-800">
+            <h3 class="text-xl font-semibold text-slate-900 dark:text-white">UIF RSNG — B3</h3>
+            <p class="text-slate-600 mt-3 leading-6 dark:text-slate-300">
+              Projeto desenvolvido no contexto da UIF RSNG da B3, relacionado à Revolução SNG e aos fluxos do Sistema
+              Nacional de Gravames no mercado financeiro. Minha atuação envolveu a construção e evolução de
+              funcionalidades e regras de negócio voltadas a operações com garantia veicular, com foco em confiabilidade
+              operacional, consistência dos fluxos e suporte à operação.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="habilidades"
+      class="scroll-mt-24 px-4 py-20 bg-white/70 border-y border-slate-200/80 dark:bg-slate-900/60 dark:border-slate-800">
+      <div class="max-w-6xl mx-auto">
+        <span class="inline-block text-sm text-blue-700 font-semibold mb-2 dark:text-blue-300">Habilidades</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Tecnologias e ferramentas</h2>
+        <p class="text-slate-600 mt-4 max-w-3xl text-lg dark:text-slate-300">
+          Tecnologias com as quais atuo no desenvolvimento de aplicações, APIs e soluções voltadas a regras de negócio,
+          sempre com foco em manutenção, evolução e confiabilidade.
+        </p>
+
+        <div class="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <article
+            class="rounded-2xl bg-white border border-slate-200 shadow-soft p-5 flex flex-col items-center text-center gap-3 hover:-translate-y-1 hover:shadow-lg transition dark:bg-slate-900 dark:border-slate-800">
+            <img src="/assets/java-svgrepo-com.svg" alt="Logo Java" class="w-14 h-14 object-contain"
+              loading="lazy">
+            <h3 class="text-base font-semibold text-slate-900 dark:text-white">Java</h3>
+          </article>
+
+          <article
+            class="rounded-2xl bg-white border border-slate-200 shadow-soft p-5 flex flex-col items-center text-center gap-3 hover:-translate-y-1 hover:shadow-lg transition dark:bg-slate-900 dark:border-slate-800">
+            <img src="/assets/spring-svgrepo-com.svg" alt="Logo Spring Boot"
+              class="w-14 h-14 object-contain" loading="lazy">
+            <h3 class="text-base font-semibold text-slate-900 dark:text-white">Spring Boot</h3>
+          </article>
+
+          <article
+            class="rounded-2xl bg-white border border-slate-200 shadow-soft p-5 flex flex-col items-center text-center gap-3 hover:-translate-y-1 hover:shadow-lg transition dark:bg-slate-900 dark:border-slate-800">
+            <img src="/assets/batch-services-svgrepo-com.svg" alt="Ícone Spring Batch"
+              class="w-14 h-14 object-contain" loading="lazy">
+            <h3 class="text-base font-semibold text-slate-900 dark:text-white">Spring Batch</h3>
+          </article>
+
+          <article
+            class="rounded-2xl bg-white border border-slate-200 shadow-soft p-5 flex flex-col items-center text-center gap-3 hover:-translate-y-1 hover:shadow-lg transition dark:bg-slate-900 dark:border-slate-800">
+            <img src="/assets/react-svgrepo-com.svg" alt="Logo React"
+              class="w-14 h-14 object-contain" loading="lazy">
+            <h3 class="text-base font-semibold text-slate-900 dark:text-white">React</h3>
+          </article>
+
+          <article
+            class="rounded-2xl bg-white border border-slate-200 shadow-soft p-5 flex flex-col items-center text-center gap-3 hover:-translate-y-1 hover:shadow-lg transition dark:bg-slate-900 dark:border-slate-800">
+            <img src="/assets/microsoft-sql-server-logo-svgrepo-com.svg" alt="Logo SQL Server"
+              class="w-14 h-14 object-contain" loading="lazy">
+            <h3 class="text-base font-semibold text-slate-900 dark:text-white">SQL Server</h3>
+          </article>
+
+          <article
+            class="rounded-2xl bg-white border border-slate-200 shadow-soft p-5 flex flex-col items-center text-center gap-3 hover:-translate-y-1 hover:shadow-lg transition dark:bg-slate-900 dark:border-slate-800">
+            <img src="/assets/amazon-web-services-logo-svgrepo-com.svg" alt="Logo Amazon Web Services"
+              class="w-14 h-14 object-contain" loading="lazy">
+            <h3 class="text-base font-semibold text-slate-900 dark:text-white">Amazon Web Services</h3>
+          </article>
+
+          <article
+            class="rounded-2xl bg-white border border-slate-200 shadow-soft p-5 flex flex-col items-center text-center gap-3 hover:-translate-y-1 hover:shadow-lg transition dark:bg-slate-900 dark:border-slate-800">
+            <img src="/assets/grafana-svgrepo-com.svg" alt="Logo Grafana"
+              class="w-14 h-14 object-contain" loading="lazy">
+            <h3 class="text-base font-semibold text-slate-900 dark:text-white">Grafana</h3>
+          </article>
+
+          <article
+            class="rounded-2xl bg-white border border-slate-200 shadow-soft p-5 flex flex-col items-center text-center gap-3 hover:-translate-y-1 hover:shadow-lg transition dark:bg-slate-900 dark:border-slate-800">
+            <img src="/assets/datadog-svgrepo-com.svg" alt="Logo Datadog"
+              class="w-14 h-14 object-contain" loading="lazy">
+            <h3 class="text-base font-semibold text-slate-900 dark:text-white">Datadog</h3>
+          </article>
+
+          <article
+            class="rounded-2xl bg-white border border-slate-200 shadow-soft p-5 flex flex-col items-center text-center gap-3 hover:-translate-y-1 hover:shadow-lg transition dark:bg-slate-900 dark:border-slate-800">
+            <img src="/assets/database-migration-service-svgrepo-com.svg" alt="Ícone Liquibase"
+              class="w-14 h-14 object-contain" loading="lazy">
+            <h3 class="text-base font-semibold text-slate-900 dark:text-white">Liquibase</h3>
+          </article>
+
+          <article
+            class="rounded-2xl bg-white border border-slate-200 shadow-soft p-5 flex flex-col items-center text-center gap-3 hover:-translate-y-1 hover:shadow-lg transition dark:bg-slate-900 dark:border-slate-800">
+            <img src="/assets/git-icon-logo-svgrepo-com.svg" alt="Logo Git"
+              class="w-14 h-14 object-contain" loading="lazy">
+            <h3 class="text-base font-semibold text-slate-900 dark:text-white">Git</h3>
+          </article>
+
+          <article
+            class="rounded-2xl bg-white border border-slate-200 shadow-soft p-5 flex flex-col items-center text-center gap-3 hover:-translate-y-1 hover:shadow-lg transition dark:bg-slate-900 dark:border-slate-800">
+            <img src="/assets/scrum-svgrepo-com.svg" alt="Ícone Scrum"
+              class="w-14 h-14 object-contain" loading="lazy">
+            <h3 class="text-base font-semibold text-slate-900 dark:text-white">Scrum</h3>
+          </article>
+
+          <article
+            class="rounded-2xl bg-white border border-slate-200 shadow-soft p-5 flex flex-col items-center text-center gap-3 hover:-translate-y-1 hover:shadow-lg transition dark:bg-slate-900 dark:border-slate-800">
+            <img src="/assets/kanban-svgrepo-com.svg" alt="Ícone Kanban"
+              class="w-14 h-14 object-contain" loading="lazy">
+            <h3 class="text-base font-semibold text-slate-900 dark:text-white">Kanban</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="scroll-mt-24 px-4 py-20">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <span class="inline-block text-sm text-blue-700 font-semibold mb-2 dark:text-blue-300">Contato</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Vamos conversar</h2>
+          <p class="text-slate-600 mt-4 max-w-2xl mx-auto text-lg dark:text-slate-300">
+            Estou disponível para oportunidades, novos projetos e conexões na área de desenvolvimento.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <div
+            class="rounded-2xl bg-white p-6 md:p-8 shadow-soft border border-slate-200 dark:bg-slate-900 dark:border-slate-800">
+            <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-6">Envie uma mensagem</h3>
+
+            <form class="space-y-5">
+              <div>
+                <label for="nome" class="block text-sm font-medium text-slate-900 dark:text-slate-100">Nome</label>
+                <input id="nome" type="text" placeholder="Seu nome"
+                  class="mt-2 w-full rounded-xl bg-slate-50 px-4 py-3 text-slate-900 border border-slate-300 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-800 dark:text-white dark:border-slate-700 dark:placeholder:text-slate-500">
+              </div>
+
+              <div>
+                <label for="email" class="block text-sm font-medium text-slate-900 dark:text-slate-100">Email</label>
+                <input id="email" type="email" placeholder="seu@email.com"
+                  class="mt-2 w-full rounded-xl bg-slate-50 px-4 py-3 text-slate-900 border border-slate-300 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-800 dark:text-white dark:border-slate-700 dark:placeholder:text-slate-500">
+              </div>
+
+              <div>
+                <label for="mensagem"
+                  class="block text-sm font-medium text-slate-900 dark:text-slate-100">Mensagem</label>
+                <textarea id="mensagem" rows="5" placeholder="Escreva sua mensagem..."
+                  class="mt-2 w-full rounded-xl bg-slate-50 px-4 py-3 text-slate-900 border border-slate-300 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none dark:bg-slate-800 dark:text-white dark:border-slate-700 dark:placeholder:text-slate-500"></textarea>
+              </div>
+
+              <button type="submit"
+                class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition shadow-soft">
+                Enviar mensagem
+              </button>
+            </form>
+          </div>
+
+          <div
+            class="rounded-2xl bg-white p-6 md:p-8 shadow-soft border border-slate-200 dark:bg-slate-900 dark:border-slate-800">
+            <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-6">Informações de contato</h3>
+
+            <div class="space-y-5 text-slate-600 dark:text-slate-300">
+              <div>
+                <p class="text-sm text-slate-500 dark:text-slate-400">Email</p>
+                <a href="mailto:guilhermerezende1994@gmail.com"
+                  class="text-slate-900 hover:text-blue-600 transition font-semibold dark:text-white dark:hover:text-blue-300">guilhermerezende1994@gmail.com</a>
+              </div>
+
+              <div>
+                <p class="text-sm text-slate-500 dark:text-slate-400">LinkedIn</p>
+                <a href="https://www.linkedin.com/in/guilherme-rezende-inacio/" target="_blank"
+                  class="text-slate-900 hover:text-blue-600 transition font-semibold dark:text-white dark:hover:text-blue-300">linkedin.com/in/guilherme-rezende-inacio</a>
+              </div>
+
+              <div>
+                <p class="text-sm text-slate-500 dark:text-slate-400">GitHub</p>
+                <a href="https://github.com/GuiRezende" target="_blank"
+                  class="text-slate-900 hover:text-blue-600 transition font-semibold dark:text-white dark:hover:text-blue-300">github.com/GuiRezende</a>
+              </div>
+
+              <div>
+                <p class="text-sm text-slate-500 dark:text-slate-400">Disponibilidade</p>
+                <p class="text-slate-900 font-semibold dark:text-white">Aberto a oportunidades e novos projetos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    const themeToggleButton = document.getElementById('theme-toggle');
+    const themeToggleIcon = document.getElementById('theme-toggle-icon');
+    const root = document.documentElement;
+
+    const updateThemeIcon = () => {
+      themeToggleIcon.textContent = root.classList.contains('dark') ? '☀️' : '🌙';
+    };
+
+    themeToggleButton.addEventListener('click', () => {
+      root.classList.toggle('dark');
+      updateThemeIcon();
+    });
+
+    updateThemeIcon();
+  </script>
+</body>
+
+</html>
