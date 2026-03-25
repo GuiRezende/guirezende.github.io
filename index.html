@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR" class="scroll-smooth dark">
 
 <head>
   <meta charset="UTF-8">
@@ -371,22 +371,6 @@
       </div>
     </section>
   </main>
-  <script>
-    const themeToggleButton = document.getElementById('theme-toggle');
-    const themeToggleIcon = document.getElementById('theme-toggle-icon');
-    const root = document.documentElement;
-
-    const updateThemeIcon = () => {
-      themeToggleIcon.textContent = root.classList.contains('dark') ? '☀️' : '🌙';
-    };
-
-    themeToggleButton.addEventListener('click', () => {
-      root.classList.toggle('dark');
-      updateThemeIcon();
-    });
-
-    updateThemeIcon();
-  </script>
 </body>
 
 </html>
