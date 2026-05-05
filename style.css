@@ -4,3 +4,24 @@
     text-decoration: none;
     font-family: "Titillium Web", "sans-serif";
 }
+
+html {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+body,
+header,
+section,
+article,
+a,
+button,
+input,
+textarea {
+  transition-property: background-color, border-color, color, box-shadow, transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}

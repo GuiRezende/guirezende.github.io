@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth dark">
+<html lang="pt-BR" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
@@ -10,6 +10,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -43,6 +44,7 @@
           <a href="#sobre" class="hover:text-blue-600 transition">Sobre</a>
           <a href="#projetos" class="hover:text-blue-600 transition">Projetos</a>
           <a href="#habilidades" class="hover:text-blue-600 transition">Habilidades</a>
+          <a href="#ideia" class="hover:text-blue-600 transition">Ideia</a>
           <a href="#contato" class="hover:text-blue-600 transition">Contato</a>
         </div>
 
@@ -56,8 +58,7 @@
   </header>
 
   <main class="pt-16 md:pt-24">
-    <section id="home"
-      class="scroll-mt-24 max-w-6xl mx-auto px-4 min-h-[85vh] flex flex-col-reverse md:flex-row items-center justify-center gap-10 md:gap-20">
+    <section id="home" class="scroll-mt-24 max-w-6xl mx-auto px-4 min-h-[85vh] flex flex-col-reverse md:flex-row items-center justify-center gap-10 md:gap-20">
       <div class="text-center md:text-left max-w-xl">
         <span
           class="inline-flex items-center rounded-full bg-blue-100 text-blue-700 px-4 py-1.5 text-sm font-semibold mb-4 dark:bg-blue-500/10 dark:text-blue-300">
@@ -99,8 +100,7 @@
       </div>
     </section>
 
-    <section id="sobre"
-      class="scroll-mt-24 px-4 py-20 bg-white/70 border-y border-slate-200/80 dark:bg-slate-900/60 dark:border-slate-800">
+    <section id="sobre" class="scroll-mt-24 px-4 py-20 bg-white/70 border-y border-slate-200/80 dark:bg-slate-900/60 dark:border-slate-800">
       <div class="max-w-6xl mx-auto">
         <div class="max-w-4xl">
           <span
@@ -198,8 +198,7 @@
       </div>
     </section>
 
-    <section id="habilidades"
-      class="scroll-mt-24 px-4 py-20 bg-white/70 border-y border-slate-200/80 dark:bg-slate-900/60 dark:border-slate-800">
+    <section id="habilidades" class="scroll-mt-24 px-4 py-20 bg-white/70 border-y border-slate-200/80 dark:bg-slate-900/60 dark:border-slate-800">
       <div class="max-w-6xl mx-auto">
         <span class="inline-block text-sm text-blue-700 font-semibold mb-2 dark:text-blue-300">Habilidades</span>
         <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Tecnologias e ferramentas</h2>
@@ -296,6 +295,207 @@
       </div>
     </section>
 
+    <section id="ideia" class="scroll-mt-24 px-4 py-20 bg-white/70 border-y border-slate-200/80 dark:bg-slate-900/60 dark:border-slate-800">
+      <div class="max-w-6xl mx-auto">
+        <div class="max-w-3xl">
+          <span
+            class="inline-flex items-center rounded-full bg-blue-100 text-blue-700 px-4 py-1.5 text-sm font-semibold mb-4 dark:bg-blue-500/10 dark:text-blue-300">
+            Compartilhe sua ideia
+          </span>
+
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">
+            Conte sobre o projeto que você quer construir
+          </h2>
+
+          <p class="text-slate-600 mt-4 text-lg dark:text-slate-300">
+            Preencha o formulário abaixo para simular um briefing inicial. Os dados serão validados no navegador e não
+            serão enviados para nenhum servidor.
+          </p>
+        </div>
+
+        <form id="idea-form" class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6" novalidate>
+          <div class="md:col-span-2">
+            <p class="block text-sm font-medium text-slate-900 dark:text-slate-100">
+              Tipo de pessoa
+            </p>
+
+            <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <label
+                class="rounded-xl border border-slate-300 bg-slate-50 p-4 cursor-pointer transition hover:border-blue-500 hover:bg-blue-50 dark:border-slate-700 dark:bg-slate-800 dark:hover:border-blue-400 dark:hover:bg-blue-500/10">
+                <input type="radio" name="personType" value="fisica" class="mr-2">
+                Pessoa física
+              </label>
+
+              <label
+                class="rounded-xl border border-slate-300 bg-slate-50 p-4 cursor-pointer transition hover:border-blue-500 hover:bg-blue-50 dark:border-slate-700 dark:bg-slate-800 dark:hover:border-blue-400 dark:hover:bg-blue-500/10">
+                <input type="radio" name="personType" value="juridica" class="mr-2">
+                Pessoa jurídica
+              </label>
+            </div>
+
+            <p class="error-message mt-1 text-sm text-red-600 dark:text-red-400"></p>
+          </div>
+
+          <div id="document-field-wrapper" class="hidden md:col-span-2">
+            <label id="document-label" for="document-number"
+              class="block text-sm font-medium text-slate-900 dark:text-slate-100">
+              Documento
+            </label>
+
+            <input id="document-number" name="documentNumber" type="text" placeholder="" maxlength="18"
+              class="mt-2 w-full rounded-xl bg-slate-50 px-4 py-3 text-slate-900 border border-slate-300 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-800 dark:text-white dark:border-slate-700 dark:placeholder:text-slate-500">
+
+            <p class="error-message mt-1 text-sm text-red-600 dark:text-red-400"></p>
+          </div>
+
+          <div>
+            <label for="idea-name" class="block text-sm font-medium text-slate-900 dark:text-slate-100">
+              Nome completo ou razão social
+            </label>
+
+            <input id="idea-name" name="name" type="text" placeholder="Ex.: Guilherme Rezende"
+              class="mt-2 w-full rounded-xl bg-slate-50 px-4 py-3 text-slate-900 border border-slate-300 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-800 dark:text-white dark:border-slate-700 dark:placeholder:text-slate-500">
+
+            <p class="error-message mt-1 text-sm text-red-600 dark:text-red-400"></p>
+          </div>
+
+          <div>
+            <label for="idea-email" class="block text-sm font-medium text-slate-900 dark:text-slate-100">
+              Email
+            </label>
+
+            <input id="idea-email" name="email" type="email" placeholder="seu@email.com"
+              class="mt-2 w-full rounded-xl bg-slate-50 px-4 py-3 text-slate-900 border border-slate-300 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-800 dark:text-white dark:border-slate-700 dark:placeholder:text-slate-500">
+
+            <p class="error-message mt-1 text-sm text-red-600 dark:text-red-400"></p>
+          </div>
+
+          <div>
+            <label for="project-type" class="block text-sm font-medium text-slate-900 dark:text-slate-100">
+              Tipo de projeto
+            </label>
+
+            <select id="project-type" name="projectType"
+              class="mt-2 w-full rounded-xl bg-slate-50 px-4 py-3 text-slate-900 border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-800 dark:text-white dark:border-slate-700">
+              <option value="">Selecione uma opção</option>
+              <option value="site">Site institucional</option>
+              <option value="sistema">Sistema web</option>
+              <option value="landing-page">Landing page</option>
+              <option value="api">API ou integração</option>
+            </select>
+
+            <p class="error-message mt-1 text-sm text-red-600 dark:text-red-400"></p>
+          </div>
+
+          <div>
+            <label for="deadline" class="block text-sm font-medium text-slate-900 dark:text-slate-100">
+              Prazo desejado
+            </label>
+
+            <input id="deadline" name="deadline" type="date"
+              class="mt-2 w-full rounded-xl bg-slate-50 px-4 py-3 text-slate-900 border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-800 dark:text-white dark:border-slate-700">
+
+            <p class="error-message mt-1 text-sm text-red-600 dark:text-red-400"></p>
+          </div>
+
+          <div class="md:col-span-2">
+            <p class="block text-sm font-medium text-slate-900 dark:text-slate-100">
+              Orçamento estimado
+            </p>
+
+            <div class="mt-3 grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <label
+                class="rounded-xl border border-slate-300 bg-slate-50 p-4 cursor-pointer transition hover:border-blue-500 hover:bg-blue-50 dark:border-slate-700 dark:bg-slate-800 dark:hover:border-blue-400 dark:hover:bg-blue-500/10">
+                <input type="radio" name="budget" value="baixo" class="mr-2">
+                Até R$ 2.000
+              </label>
+
+              <label
+                class="rounded-xl border border-slate-300 bg-slate-50 p-4 cursor-pointer transition hover:border-blue-500 hover:bg-blue-50 dark:border-slate-700 dark:bg-slate-800 dark:hover:border-blue-400 dark:hover:bg-blue-500/10">
+                <input type="radio" name="budget" value="medio" class="mr-2">
+                R$ 2.000 a R$ 5.000
+              </label>
+
+              <label
+                class="rounded-xl border border-slate-300 bg-slate-50 p-4 cursor-pointer transition hover:border-blue-500 hover:bg-blue-50 dark:border-slate-700 dark:bg-slate-800 dark:hover:border-blue-400 dark:hover:bg-blue-500/10">
+                <input type="radio" name="budget" value="alto" class="mr-2">
+                Acima de R$ 5.000
+              </label>
+            </div>
+
+            <p class="error-message mt-1 text-sm text-red-600 dark:text-red-400"></p>
+          </div>
+
+          <div class="md:col-span-2">
+            <label for="idea-description" class="block text-sm font-medium text-slate-900 dark:text-slate-100">
+              Descrição da ideia
+            </label>
+
+            <textarea id="idea-description" name="description" rows="5"
+              placeholder="Conte um pouco sobre objetivo, público-alvo e funcionalidades desejadas..."
+              class="mt-2 w-full rounded-xl bg-slate-50 px-4 py-3 text-slate-900 border border-slate-300 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none dark:bg-slate-800 dark:text-white dark:border-slate-700 dark:placeholder:text-slate-500"></textarea>
+
+            <p class="error-message mt-1 text-sm text-red-600 dark:text-red-400"></p>
+          </div>
+
+          <div class="md:col-span-2">
+            <p class="block text-sm font-medium text-slate-900 dark:text-slate-100">
+              Tire uma foto para personalizar seu envio
+            </p>
+
+            <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">
+              A foto é usada apenas para simular a captura no navegador e não será enviada para nenhum servidor.
+            </p>
+
+            <div class="mt-4 flex flex-col gap-4">
+              <div class="flex flex-col sm:flex-row gap-3">
+                <button id="open-camera" type="button"
+                  class="rounded-xl bg-slate-900 px-5 py-3 font-semibold text-white shadow-soft transition hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200">
+                  Abrir câmera
+                </button>
+
+                <button id="take-photo" type="button" disabled
+                  class="rounded-xl bg-blue-600 px-5 py-3 font-semibold text-white shadow-soft transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50">
+                  Tirar foto
+                </button>
+              </div>
+
+              <video id="camera-preview"
+                class="hidden w-full max-w-md rounded-2xl border border-slate-200 bg-slate-200 shadow-soft dark:border-slate-700 dark:bg-slate-800"
+                autoplay playsinline></video>
+
+              <canvas id="photo-canvas" class="hidden"></canvas>
+
+              <div id="photo-result"
+                class="hidden max-w-md rounded-2xl border border-slate-200 p-3 shadow-soft dark:border-slate-700">
+                <img id="captured-photo" src="" alt="Foto capturada pelo formulário" class="rounded-xl">
+              </div>
+
+              <p class="error-message mt-1 text-sm text-red-600 dark:text-red-400"></p>
+            </div>
+          </div>
+
+          <div class="md:col-span-2">
+            <label class="flex items-start gap-3 text-slate-600 dark:text-slate-300">
+              <input id="terms" name="terms" type="checkbox" class="mt-1">
+              <span>
+                Confirmo que as informações preenchidas são reais e autorizo o contato para conversar sobre a ideia.
+              </span>
+            </label>
+
+            <p class="error-message mt-1 text-sm text-red-600 dark:text-red-400"></p>
+          </div>
+
+          <div class="md:col-span-2">
+            <button type="submit"
+              class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition shadow-soft">
+              Enviar ideia
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    
     <section id="contato" class="scroll-mt-24 px-4 py-20">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-12">
@@ -311,24 +511,27 @@
             class="rounded-2xl bg-white p-6 md:p-8 shadow-soft border border-slate-200 dark:bg-slate-900 dark:border-slate-800">
             <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-6">Envie uma mensagem</h3>
 
-            <form class="space-y-5">
+            <form id="contact-form" class="space-y-5" novalidate>
               <div>
-                <label for="nome" class="block text-sm font-medium text-slate-900 dark:text-slate-100">Nome</label>
-                <input id="nome" type="text" placeholder="Seu nome"
+                <label for="contact-name" class="block text-sm font-medium text-slate-900 dark:text-slate-100">Nome</label>
+                <input id="contact-name" name="name" type="text" placeholder="Seu nome"
                   class="mt-2 w-full rounded-xl bg-slate-50 px-4 py-3 text-slate-900 border border-slate-300 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-800 dark:text-white dark:border-slate-700 dark:placeholder:text-slate-500">
+                <p class="error-message mt-1 text-sm text-red-600 dark:text-red-400"></p>
               </div>
 
               <div>
-                <label for="email" class="block text-sm font-medium text-slate-900 dark:text-slate-100">Email</label>
-                <input id="email" type="email" placeholder="seu@email.com"
+                <label for="contact-email" class="block text-sm font-medium text-slate-900 dark:text-slate-100">Email</label>
+                <input id="contact-email" name="email" type="email" placeholder="seu@email.com"
                   class="mt-2 w-full rounded-xl bg-slate-50 px-4 py-3 text-slate-900 border border-slate-300 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-800 dark:text-white dark:border-slate-700 dark:placeholder:text-slate-500">
+                <p class="error-message mt-1 text-sm text-red-600 dark:text-red-400"></p>
               </div>
 
               <div>
-                <label for="mensagem"
+                <label for="contact-message"
                   class="block text-sm font-medium text-slate-900 dark:text-slate-100">Mensagem</label>
-                <textarea id="mensagem" rows="5" placeholder="Escreva sua mensagem..."
+                <textarea id="contact-message" name="message" rows="5" placeholder="Escreva sua mensagem..."
                   class="mt-2 w-full rounded-xl bg-slate-50 px-4 py-3 text-slate-900 border border-slate-300 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none dark:bg-slate-800 dark:text-white dark:border-slate-700 dark:placeholder:text-slate-500"></textarea>
+                <p class="error-message mt-1 text-sm text-red-600 dark:text-red-400"></p>
               </div>
 
               <button type="submit"
@@ -371,6 +574,9 @@
       </div>
     </section>
   </main>
+
+  <script src="script.js"></script>
+
 </body>
 
 </html>
